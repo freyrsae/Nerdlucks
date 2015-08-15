@@ -7,3 +7,4 @@ go to folder where you have the nerdlucks code
 
 run: flask --app=nerdlucks --debug run
 
+to login, username: admin, password: default
