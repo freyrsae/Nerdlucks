@@ -62,6 +62,10 @@ def show_leagues():
     leagues = cur.fetchall()
     return render_template('show_leagues.html', leagues = leagues)
 
+@app.route('/create_league')
+def create_league():
+    return render_template('create_league.html')
+
 
 @app.route('/add', methods=['POST'])
 def add_league():
@@ -95,3 +99,5 @@ def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('show_leagues'))
+
+# @app.route('/signup')
